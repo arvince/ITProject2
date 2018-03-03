@@ -11,6 +11,10 @@
 |
 */
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
 Route::get('/', function () {
     return view('login');
 });
@@ -32,3 +36,5 @@ Route::get('/indexHR', function () {
 Route::get('/EmpProf', function () {
     return view('HR/EmpProf');
 });
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
