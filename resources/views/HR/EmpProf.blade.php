@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿<?php
+// Start the session
+session_start();
+?>
+<!DOCTYPE html>
 <html>
 <head>
       <meta charset="utf-8" />
@@ -31,7 +35,10 @@
 padding: 15px 50px 5px 50px;
 float: right;
 font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-danger square-btn-adjust">Logout</a> </div>
-        </nav>   
+        </nav>
+    <?php
+    print_r($_SESSION);
+    ?>
            <!-- /. NAV TOP  -->
                 <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">

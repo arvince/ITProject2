@@ -1,3 +1,7 @@
+<?php
+// Start the session
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
 <head>
@@ -67,6 +71,9 @@
                             </li>
                         @endguest
                     </ul>
+                    <?php
+                    print_r($_SESSION);
+                    ?>
                 </div>
             </div>
         </nav>

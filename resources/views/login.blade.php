@@ -1,5 +1,7 @@
-
-
+<?php
+// Start the session
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -19,7 +21,7 @@
 			</div>
 
 			<div class="login-form">
-                <form class="form-horizontal" method="POST" action="{{ route('login') }}">
+                <form class="form-horizontal" method="POST" action="{{ route('login') }}" >
                     {{ csrf_field() }}
 
                     <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
@@ -49,6 +51,11 @@
                             @endif
                         </div>
                     </div>
+
+                    <?php
+                        // Set session variables
+                        $_SESSION["login"] = ;
+                    ?>
 
                     <div class="form-group">
                         <div class="col-md-6 col-md-offset-4">
