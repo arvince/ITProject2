@@ -26,8 +26,10 @@ class HomeController extends Controller
     {
         $user = Auth::user()->name;
 //        echo $user;
-        if ($user == 'admin1'){
+        if ($user == 'admin1'||$user == 'admin2'||$user == 'admin3'){
             return view('/indexHR');
+        }if ($user == 'director'){
+            return view('home');
         }else{
             return view('home');
         }
