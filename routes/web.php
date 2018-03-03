@@ -13,11 +13,12 @@
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
 Route::get('/', function () {
     return view('login');
 });
+
+Route::get('/home', 'HomeController@index')->name('home');
+
 Route::get('/PendingLeaves', function () {
     return view('HR/PendingLeaves');
 });
@@ -37,4 +38,3 @@ Route::get('/EmpProf', function () {
     return view('HR/EmpProf');
 });
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
-

@@ -20,15 +20,16 @@ class HomeController extends Controller
     /**
      * Show the application dashboard.
      *
+     * @param Request $request
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(request $request)
     {
         $user = Auth::user()->name;
 //        echo $user;
         if ($user == 'admin1'||$user == 'admin2'||$user == 'admin3'){
             return view('/indexHR');
-        }if ($user == 'director'){
+        }else if ($user == 'director'){
             return view('home');
         }else{
             return view('home');
