@@ -12,7 +12,6 @@ session_start();
 </head>
 
 <body>
-  <body>
 	<div class="login">
 		<div class="login-screen">
 			<div class="app-title">
@@ -84,10 +83,6 @@ session_start();
 		</div>
 	</div>
     <a href="{{ route('login') }}">Login</a>
-    <a href="{{ route('register') }}">Register</a>
-      
-</body>
-  
-  
+    <a href="{{ route('register') }}">Register</a>  
 </body>
 </html>
