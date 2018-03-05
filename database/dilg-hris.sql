@@ -1,8 +1,10 @@
--- MySQL dump 10.13  Distrib 5.7.21, for Linux (x86_64)
+CREATE DATABASE  IF NOT EXISTS `dilg-hris` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `dilg-hris`;
+-- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
--- Host: localhost    Database: dilg-car
+-- Host: localhost    Database: dilg-hris
 -- ------------------------------------------------------
--- Server version	5.7.21-0ubuntu0.16.04.1
+-- Server version	5.5.5-10.1.30-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -397,6 +399,29 @@ INSERT INTO `other_info` VALUES (0,'E-1873','Supervision for Database Administra
 UNLOCK TABLES;
 
 --
+-- Table structure for table `password_resets`
+--
+
+DROP TABLE IF EXISTS `password_resets`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `password_resets` (
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `password_resets`
+--
+
+LOCK TABLES `password_resets` WRITE;
+/*!40000 ALTER TABLE `password_resets` DISABLE KEYS */;
+/*!40000 ALTER TABLE `password_resets` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `pds_employee_response`
 --
 
@@ -723,14 +748,15 @@ DROP TABLE IF EXISTS `users`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `users` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `remember_token` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `username` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -739,6 +765,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'arvince','arvince','alcaidearvince@gmail.com','$2y$10$Bk0/wa32/7TQwsKcflEq9u9VBzbSfzCUIJ9bTexjerysa8HTS/BX2','w5n9882r0MBXwcCNUQSy3lhkkFmi4j1J9F406hNOqum6EgVz3Mhqa8f3H5Yw','2018-03-03 06:04:51','2018-03-03 06:04:51'),(2,'admin1','admin1','admin1@email.com','$2y$10$Bk6tZMpNJ7PgNJZb4iwEVuZTlHP58vzSXbASNxID7pt.Z7VsW/wo2','kFWqlVcJT2dXkKOhH6eEom09FmLQb3rc9iFXlyqbLC9GavMVmiYOZklW6XoP','2018-03-03 06:21:48','2018-03-03 06:21:48'),(3,'admin2','admin2','admin2@email.com','$2y$10$vz7oaKLtMSLH1IXNiFicvetbXKnNPx1sAihT4NkxhWVp3tb1bFSPG','NmDnbFzGO6zCa3AQ73oXc1bHPj6MFabUHOb6be66ftDsCkEPfONEjdUVPC7v','2018-03-03 06:29:35','2018-03-03 06:29:35'),(4,'admin3','admin3','admin3@email.com','$2y$10$jJZn72rxGCyHApGzEzJbxO0M0BDO3wQP8tEj4rTmUUqMZKc6xRF5q','5llnyq5x4qxe5WBrd0VFSAWF5DwhEEUeUUhboMke1jxD2lpP3y8r9Q8e8azO','2018-03-03 06:30:06','2018-03-03 06:30:06'),(5,'director','director','director@email.com','$2y$10$ifpaT28qQBURxuaE2uwisO/sJTpYnR7xoW6PIzRE6LSu11fjbrPsi','h1v80w0r2pV2CLAvo2XVrzTdFqYEJg1rYYLlJkRA83IF52YIJhm7gGHTADE6','2018-03-03 06:30:39','2018-03-03 06:30:39');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -816,4 +843,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-03-03 17:59:36
+-- Dump completed on 2018-03-05 17:20:32
