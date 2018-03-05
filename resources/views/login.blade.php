@@ -54,7 +54,8 @@ session_start();
 
                     <?php
                         // Set session variables
-                        $_SESSION["login"] = ;
+                        // $_SESSION["login"] = ;
+                        // comment out ko muna to. Nag-error kasi. - Ben.
                     ?>
 
                     <div class="form-group">
