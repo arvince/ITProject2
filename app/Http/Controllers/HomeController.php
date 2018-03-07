@@ -51,7 +51,7 @@ class HomeController extends Controller
         return view ('HR/RandF');
     }
 
-    public funtion getLogInPage(){
+    public function getLogInPage(){
         return view ('login');
     }
 
@@ -61,6 +61,10 @@ class HomeController extends Controller
 
     public function getEmpProf(){
         return view ('HR/EmpProf');
+    }
+
+    public function getBlank(){
+        return view ('HR/blank');
     }
 
     

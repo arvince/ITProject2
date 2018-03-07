@@ -18,9 +18,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/PendingLeaves', 'HomeController@getPendingLeaves');
 Route::get('/RandF', 'HomeController@getRandF');
 Route::get('/Employees', 'HomeController@getEmployees');
-Route::get('/blank', function () {
-    return view('HR/blank');
-});
+Route::get('/blank', 'HomeController@getBlank');
 Route::get('/indexHR', 'HomeController@getIndexHR');
 Route::get('/EmpProf', 'HomeController@getEmpProf');
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
