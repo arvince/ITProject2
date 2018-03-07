@@ -46,16 +46,16 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
 				
 					
                     <li>
-                        <a   href="indexHR"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
+                        <a   href="index"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
                     </li>
                      <li>
-                        <a  href="PendingLeaves"><i class="fa fa-file-text fa-3x"></i> Pending Leaves</a>
+                        <a  href="pendingleaves"><i class="fa fa-file-text fa-3x"></i> Pending Leaves</a>
                     </li>
                     <li>
-                        <a class="active-menu" href="RandF.html"><i class="fa fa-qrcode fa-3x"></i> Reports and Forms</a>
+                        <a class="active-menu" href="randF"><i class="fa fa-qrcode fa-3x"></i> Reports and Forms</a>
                     </li>
                       <li  >
-                        <a  href="Employees"><i class="fa  fa-users fa-3x"></i> Employees</a>
+                        <a  href="employees"><i class="fa  fa-users fa-3x"></i> Employees</a>
                     </li>		  
                   <li  >
                         <a  href="blank"><i class="fa fa-square-o fa-3x"></i> Blank Page</a>
