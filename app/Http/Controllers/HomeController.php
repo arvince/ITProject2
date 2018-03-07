@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use DB;
+use App\Quotation;
 
 class HomeController extends Controller
 {
@@ -38,9 +40,12 @@ class HomeController extends Controller
     }
 
     public function getEmployees(){
-        //$users1 = DB::table ('employee') select('name')->get();
+        $employees = DB::table('employee')->select('name')->get();
 
-        return view('HR.Employees');
+        //$employees_decode = json_decode($employees, true);
+
+        return view ('HR.Employees')->with("employees", $employees);
+
     }
 
     public function getPendingLeaves(){

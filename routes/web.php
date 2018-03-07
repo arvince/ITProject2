@@ -22,3 +22,5 @@ Route::get('/blank', 'HomeController@getBlank');
 Route::get('/indexHR', 'HomeController@getIndexHR');
 Route::get('/empProf', 'HomeController@getEmpProf');
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+Route::resource('pds', 'PdsController');
+Route::resource('employee', 'EmployeeController');

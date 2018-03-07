@@ -93,11 +93,21 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                                     <span class="chat-img pull-left">
                                         <img src="assets/img/1.png" alt="User" class="img-circle" />
                                         </span></a>
-                                    <div class="chat-body">                                        
-                                            <a href="EmpProf"><strong >Manilyn Monroe</strong></a>                                    
+                                    <div class="chat-body">
+
+                                          
+                                          <?php
+                                          $i=0;
+                                          foreach ($employees as $employee) {
+                                            echo $employee->name;
+                                          }
+                                          ?>
+                                          
                                         <p>
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
                                         </p>
+
+
                                     </div>
                                 </li>                
                                 
