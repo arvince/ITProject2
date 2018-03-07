@@ -23,8 +23,8 @@ class HomeController extends Controller
      * @param Request $request
      * @return \Illuminate\Http\Response
      */
-    public function index(request $request)
-    {
+
+    public function index(request $request){
         $user = Auth::user()->name;
 //        echo $user;
         if ($user == 'admin1'||$user == 'admin2'||$user == 'admin3'){
@@ -36,4 +36,32 @@ class HomeController extends Controller
         }
 
     }
+
+    public function getEmployees(){
+        //$users1 = DB::table ('employee') select('name')->get();
+
+        return view('HR/Employees');
+    }
+
+    public function getPendingLeaves(){
+        return view ('HR/PendingLeaves');
+    }
+
+    public function getRandF(){
+        return view ('HR/RandF');
+    }
+
+    public funtion getLogInPage(){
+        return view ('login');
+    }
+
+    public function getIndexHR(){
+        return view ('indexHR');
+    }
+
+    public function getEmpProf(){
+        return view ('HR/EmpProf');
+    }
+
+    
 }

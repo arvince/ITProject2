@@ -13,28 +13,14 @@
 
 Auth::routes();
 
-Route::get('/', function () {
-    return view('login');
-});
-
+Route::get('/', 'HomeController@getLogInPage');
 Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/PendingLeaves', function () {
-    return view('HR/PendingLeaves');
-});
-Route::get('/RandF', function () {
-    return view('HR/RandF');
-});
-Route::get('/Employees', function () {
-    return view('HR/Employees');
-});
+Route::get('/PendingLeaves', 'HomeController@getPendingLeaves');
+Route::get('/RandF', 'HomeController@getRandF');
+Route::get('/Employees', 'HomeController@getEmployees');
 Route::get('/blank', function () {
     return view('HR/blank');
 });
-Route::get('/indexHR', function () {
-    return view('indexHR');
-});
-Route::get('/EmpProf', function () {
-    return view('HR/EmpProf');
-});
+Route::get('/indexHR', 'HomeController@getIndexHR');
+Route::get('/EmpProf', 'HomeController@getEmpProf');
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
