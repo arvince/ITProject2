@@ -13,8 +13,8 @@ session_start();
      <!-- FONTAWESOME STYLES-->
     <link href="assets/css/font-awesome.css" rel="stylesheet" />
      <!-- MORRIS CHART STYLES-->
-   
-        <!-- CUSTOM STYLES-->
+   <link href="assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+    <!-- CUSTOM STYLES-->
     <link href="assets/css/custom.css" rel="stylesheet" />
      <!-- TABLE STYLES-->
     <link href="assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
