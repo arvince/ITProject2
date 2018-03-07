@@ -49,7 +49,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
 				
 					
                     <li>
-                        <a   href="indexHR"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
+                        <a   href="index"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
                     </li>
                      <li>
                         <a  href="PendingLeaves"><i class="fa fa-file-text fa-3x"></i> Pending Leaves</a>

@@ -40,15 +40,15 @@ class HomeController extends Controller
     public function getEmployees(){
         //$users1 = DB::table ('employee') select('name')->get();
 
-        return view('HR/Employees');
+        return view('HR.Employees');
     }
 
     public function getPendingLeaves(){
-        return view ('HR/PendingLeaves');
+        return view ('HR.PendingLeaves');
     }
 
     public function getRandF(){
-        return view ('HR/RandF');
+        return view ('HR.RandF');
     }
 
     public function getLogInPage(){
@@ -56,15 +56,15 @@ class HomeController extends Controller
     }
 
     public function getIndexHR(){
-        return view ('indexHR');
+        return view ('HR.index');
     }
 
     public function getEmpProf(){
-        return view ('HR/EmpProf');
+        return view ('HR.EmpProf');
     }
 
     public function getBlank(){
-        return view ('HR/blank');
+        return view ('HR.blank');
     }
 
     
