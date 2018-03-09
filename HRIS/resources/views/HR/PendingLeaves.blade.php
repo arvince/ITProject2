@@ -9,12 +9,12 @@ if(isset($_SESSION['name'])){
         // session timed out
 //        session_unset();     // unset $_SESSION variable for the run-time
 //        session_destroy();   // destroy session data in storage
-        echo '<a href="/logout" class="btn btn-danger square-btn-adjust">PLease Login</a>';
+        echo '<a href="/logout" class="btn btn-danger square-btn-adjust">Please Login</a>';
         return redirect()->route('logout');
 
     }
 }else{
-    echo '<a href="/logout" class="btn btn-danger square-btn-adjust">PLease Login</a>';
+    echo '<a href="/logout" class="btn btn-danger square-btn-adjust">Please Login</a>';
     return redirect()->route('logout');
 }
 ?>
