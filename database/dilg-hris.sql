@@ -169,7 +169,7 @@ DROP TABLE IF EXISTS `employee`;
 CREATE TABLE `employee` (
   `emp_id` varchar(6) NOT NULL COMMENT 'Agency Employee ID ni sir Zaldy is E-1873 kaya di ako sure kung ilang VARCHAR ba yung ilalagay ko diyan, nilagay ko 6.',
   `lastname` varchar(45) DEFAULT NULL,
-  `firstname` varchar(45) DEFAULT NULL,
+  `givenname` varchar(45) DEFAULT NULL,
   `middlename` varchar(45) DEFAULT NULL,
   `dateOfBirth` date DEFAULT NULL,
   `sex` enum('M','F') DEFAULT NULL COMMENT 'M = Male\nF = Female',
@@ -828,4 +828,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-03-09  9:43:20
+-- Dump completed on 2018-03-09  9:49:07
