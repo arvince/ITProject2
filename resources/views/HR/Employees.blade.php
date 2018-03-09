@@ -90,25 +90,22 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                             <ul class="chat-box">
                                 <li class="left clearfix">
                                     <a href="EmpProf.html">
+                                      <?php foreach ($employees as $employee): ?>
                                     <span class="chat-img pull-left">
                                         <img src="assets/img/1.png" alt="User" class="img-circle" />
                                         </span></a>
                                     <div class="chat-body">
-
-                                          
-                                          <?php
-                                          $i=0;
-                                          foreach ($employees as $employee) {
-                                            echo $employee->name;
-                                          }
-                                          ?>
-                                          
+                                      <a href="empProf">
+                                        <?php echo $employee->lastname;?>
+                                        <?php echo $employee->givenname;?>
+                                        <?php echo $employee->middlename;?>
+                                        </a>              
                                         <p>
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+                                            <hr>
                                         </p>
-
-
                                     </div>
+                                  <?php endforeach; ?>
                                 </li>                
                                 
                             </ul>

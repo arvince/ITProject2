@@ -40,7 +40,7 @@ class HomeController extends Controller
     }
 
     public function getEmployees(){
-        $employees = DB::table('employee')->select('name')->get();
+        $employees = DB::table('employee')->select('givenname', 'middlename', 'lastname')->get();
 
         //$employees_decode = json_decode($employees, true);
 
