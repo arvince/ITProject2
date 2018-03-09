@@ -27,6 +27,7 @@ class HomeController extends Controller
     {
         $user = Auth::user()->name;
 //        echo $user;
+//        $value = $request->session()->all();
         if ($user == 'admin1'||$user == 'admin2'||$user == 'admin3'){
             return view('/indexHR');
         }else if ($user == 'director'){

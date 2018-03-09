@@ -1,6 +1,22 @@
 ﻿<?php
 // Start the session
 session_start();
+if(isset($_SESSION['name'])){
+    print $_SESSION['time'] - time();
+    if ((time() - $_SESSION['time']) > 30){
+
+
+        // session timed out
+//        session_unset();     // unset $_SESSION variable for the run-time
+//        session_destroy();   // destroy session data in storage
+        echo '<a href="/logout" class="btn btn-danger square-btn-adjust">PLease Login</a>';
+        return redirect()->route('logout');
+
+    }
+}else{
+    echo '<a href="/logout" class="btn btn-danger square-btn-adjust">PLease Login</a>';
+    return redirect()->route('logout');
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,7 +46,7 @@ session_start();
   <div style="color: white;
 padding: 15px 50px 5px 50px;
 float: right;
-font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-danger square-btn-adjust">Logout</a> </div>
+font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="/logout" class="btn btn-danger square-btn-adjust">Logout</a> </div>
         </nav>
     <?php
     print_r($_SESSION);

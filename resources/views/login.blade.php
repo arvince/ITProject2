@@ -1,6 +1,10 @@
 <?php
-// Start the session
+//use Illuminate\Support\Facades\Auth;
 session_start();
+// Start the session
+//$user = Auth::user()->name;
+//$_SESSION["name"] = $user;
+$_SESSION['time'] = time();
 ?>
 <!DOCTYPE html>
 <html lang="en" >
@@ -51,11 +55,6 @@ session_start();
                             @endif
                         </div>
                     </div>
-
-                    <?php
-                        // Set session variables
-                        $_SESSION["login"] = ;
-                    ?>
 
                     <div class="form-group">
                         <div class="col-md-6 col-md-offset-4">
